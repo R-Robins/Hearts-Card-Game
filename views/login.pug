@@ -1,0 +1,29 @@
+doctype html 
+html(lang='en')
+
+head
+    title= 'Login'
+    include partials/head.pug
+
+body(class = 'login-body')
+    h1(class= 'vertical-padding align-center') Welcome to Hearts!
+
+    div(class= 'center-box')
+        h1(class= 'vertical-padding align-center') Login
+        form(action='login', method='post')
+            if errors
+                each error in errors
+                    p(class= 'align-center', style= 'color: red')= error.msg
+            div
+                label(class='align-right vertical-padding') Username:
+                input(class='align-left' type='Username', name='username')
+
+            div
+                label(class='align-right vertical-padding') Password:
+                input(class='align-left', type='Password', name='password')
+
+            div(class= 'vertical-padding align-center')
+                button.btn.btn-primary(type='submit') Submit
+
+        div(class= 'vertical-padding-50 align-center')
+            a(href='/registration') Not registered? Create an account here!

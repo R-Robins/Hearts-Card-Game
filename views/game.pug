@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+
+head
+    title= title
+    include partials/head.pug
+    link(rel='stylesheet', href='/stylesheets/chat.css')
+    link(rel='stylesheet', href='/stylesheets/cards.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css")
+
+body(class = 'general-body')
+    div(class='banner')
+        h1(class='banner-align-left')
+            a(href='/lobby' style="color: whitesmoke") Hearts
+        span
+            a(href=`/leave?game_id=${game_id}`, class='banner-align-right') Leave game
+
+
+    div(class='game-container')
+
+        div(class='game-box')
+            p(class='waiting-box') Waiting for players to join...
+
+        div(class = 'chat-box')
+            h1(class='no-vertical-padding') Game chat
+            div
+                div(id='chat-window')
+                    div(id='output')
+                    div(id='feedback')
+                input(id='message', type='text', placeholder='Message', style='color: black')
+                input(id='room_id', type='hidden')
+                button.btn.btn-primary(id='send', style='width: 100%') Send
+
+    script.
+        const username = '#{user.username}'
+        const user_id = '#{user.user_id}'
+        const game_id = '#{game_id}'
+        document.getElementById('room_id').value = game_id
+    script(src='/javascripts/chat.js')
+    script(src='/javascripts/game.js')
