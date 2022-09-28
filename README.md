@@ -1,4 +1,4 @@
-Use Demonstration: [Hearts Game Demonstration.pdf](https://github.com/R-Robins/Hearts-Card-Game/files/9661278/Hearts.Game.Demonstration.pdf)
+Use Demonstration: https://github.com/R-Robins/Hearts-Card-Game/blob/main/Hearts%20Game%20Demonstration.pdf
 
 
 # Hearts Game
