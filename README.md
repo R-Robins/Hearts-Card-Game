@@ -1,4 +1,5 @@
-Use Case Demonstration: [hearts game usage.pdf](https://github.com/R-Robins/Hearts-Card-Game/files/9661248/hearts.game.usage.pdf)
+Use Demonstration: [Hearts Game Demonstration.pdf](https://github.com/R-Robins/Hearts-Card-Game/files/9661278/Hearts.Game.Demonstration.pdf)
+
 
 # Hearts Game
 Rohan Patel, Jake Carter, Richard Robinson, Guanming Pan
